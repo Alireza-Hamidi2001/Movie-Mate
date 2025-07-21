@@ -1,0 +1,57 @@
+.details {
+    line-height: 1.4;
+    font-size: 1.4rem;
+    font-family: "open-sans";
+}
+
+.details header {
+    display: flex;
+}
+
+.details section {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.details img {
+    width: 35%;
+}
+
+.details-overview {
+    width: 100%;
+    padding: 2.4rem 3rem;
+    background-color: var(--color-background-100);
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.details-overview h2 {
+    font-size: 2.4rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.1;
+}
+
+.details-overview p {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    color: white;
+    // gap: 0.6rem;
+}
+
+.details-star {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.details-add {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    &:active{
+        background-color: rebeccapurple;
+    }
+}

@@ -1,0 +1,51 @@
+.loader {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 4.8rem 4.8rem 0 4.8rem;
+    letter-spacing: 1px;
+}
+
+.wave-loader {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 10px;
+    height: 80px;
+    padding: 20px;
+}
+
+.wave-loader span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    animation: wave 1s ease-in-out infinite;
+}
+
+.wave-loader span:nth-child(1) {
+    animation-delay: 0s;
+    background-color: #3498db;
+}
+
+.wave-loader span:nth-child(2) {
+    animation-delay: 0.2s;
+    background-color: #db3434;
+}
+
+.wave-loader span:nth-child(3) {
+    animation-delay: 0.4s;
+    background-color: #dbca34;
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}

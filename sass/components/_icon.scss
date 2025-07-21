@@ -1,0 +1,128 @@
+.icon {
+    &-summary {
+
+        width: 1.5rem;
+        height: 1.5rem;
+
+        &-star2 {
+            fill: gold;
+        }
+
+        &-star {
+            fill: salmon;
+        }
+
+        &-clock {
+            fill: wheat;
+        }
+
+        &-arrow {
+            fill: whitesmoke;
+        }
+
+        &-pin {
+            fill: teal;
+        }
+    }
+
+    &__footer {
+        width: 4rem;
+        height: 4rem;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover {
+            transform: scale(1.05);
+
+            &:not(:hover) {
+                transform: scale(0.95);
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+
+    &-bell {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 1rem;
+        fill: #ffffff;
+        animation: ring 2s infinite;
+    }
+
+    &-error {
+        fill: gold;
+        width: 4rem;
+        height: 4rem;
+        margin: 0 2rem;
+        animation: error 1s infinite;
+    }
+
+    &-search {
+        width: 2rem;
+        height: 2rem;
+        margin-left: -3rem;
+    }
+
+    &-back {
+        width: 3rem;
+        height: 3rem;
+        fill: black;
+    }
+
+    &-rate {
+        width: 2rem;
+        height: 2rem;
+        fill: gold;
+        margin-right: 1rem;
+    }
+
+    &-detail {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 0.5rem;
+        fill: whitesmoke;
+    }
+
+    &-detail-clock {
+        margin-left: 2rem;
+    }
+
+    &-paint-format {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 0.5rem;
+    }
+}
+
+@keyframes ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    15% {
+        transform: rotate(15deg);
+    }
+
+    30% {
+        transform: rotate(-10deg);
+    }
+
+    45% {
+        transform: rotate(8deg);
+    }
+
+    60% {
+        transform: rotate(-6deg);
+    }
+
+    75% {
+        transform: rotate(4deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
