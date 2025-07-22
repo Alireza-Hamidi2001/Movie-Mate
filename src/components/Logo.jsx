@@ -2,9 +2,9 @@ function Logo() {
     return (
         <div className="logo">
             <span role="img">🍿</span>
-            <h1>use Popcorn</h1>
+            <h1>Movie Mate</h1>
         </div>
     );
 }
 
-export default Logo
+export default Logo;

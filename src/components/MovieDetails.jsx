@@ -145,8 +145,9 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
                             {!isWatched ? (
                                 <>
                                     <StarRating
+                                        className="stars"
                                         maxRating={10}
-                                        size={2.4}
+                                        size={2.2}
                                         onSetRating={setUserRating}
                                     />
                                     {userRating > 0 && (
@@ -165,7 +166,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
                         <p>
                             <em>{plot}</em>
                         </p>
-                        <p>Actors : {actors}</p>
+                        <p>Actors: <br></br> {actors}</p>
                         <p>
                             Directed by <em>{director}</em>
                         </p>

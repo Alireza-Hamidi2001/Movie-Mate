@@ -1,3 +1,5 @@
+@use "../abstracts/mixins";
+
 .search {
     justify-self: center;
     border: none;
@@ -10,6 +12,10 @@
 
     /* background-color: var(--color-background-900); */
     background-color: var(--color-primary-light);
+
+    @include mixins.respond(phone) {
+        width: 30rem;
+    }
 }
 
 .search::placeholder {

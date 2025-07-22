@@ -1,3 +1,5 @@
+@use "../abstracts/mixins";
+
 .footer {
     background-color: var(--color-primary);
     border-radius: 0.9rem;
@@ -9,6 +11,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 2rem;
+
 
         &-container {}
 
@@ -25,6 +28,27 @@
         padding: 2rem 6rem;
         font-size: 1.6rem;
         color: var(--color-primary-light-2);
+
+        &>* {
+            @include mixins.respond(phone) {
+                justify-self: center;
+                width: 100%;
+
+                &:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        @include mixins.respond(tab-port) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include mixins.respond(phone) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
 
         &-main {
             font-size: 2.5rem;
@@ -43,7 +67,7 @@
             border: none;
             height: 0.5rem;
             background-color: var(--color-primary-dark);
-            width: 50%;
+            width: 6rem;
             margin-bottom: 2rem;
             border-radius: 10rem;
         }
@@ -90,6 +114,8 @@
         &-left {
             font-family: "KottaOne";
             color: var(--color-primary-light-2);
+            text-align: justify;
+            margin-right: 2rem;
         }
 
         &-right {
@@ -100,6 +126,18 @@
 
             & p:not(:last-child) {
                 margin-right: 3rem;
+
+            }
+
+            & p {
+                @include mixins.respond(phone) {
+                    text-align: center;
+                }
+            }
+
+            @include mixins.respond(phone) {
+                flex-direction: column;
+
             }
         }
     }

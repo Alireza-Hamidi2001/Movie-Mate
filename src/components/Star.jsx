@@ -17,6 +17,7 @@ function Star({ onRate, full, onHoverIn, onHoverOut, color, size }) {
                 <svg
                     style={starStyle}
                     strokeWidth="1"
+                    className="starFull"
                 >
                     <use xlinkHref={`${sprite}#icon-star2`}></use>
                 </svg>
@@ -24,6 +25,7 @@ function Star({ onRate, full, onHoverIn, onHoverOut, color, size }) {
                 <svg
                     style={starStyle}
                     strokeWidth="1"
+                    className="starHole"
                 >
                     <use xlinkHref={`${sprite}#icon-star-o`}></use>
                 </svg>

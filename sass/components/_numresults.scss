@@ -1,7 +1,14 @@
+@use "../abstracts/mixins";
+
 .num-results {
     justify-self: end;
     font-size: 1.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include mixins.respond(phone) {
+        font-size: 1.4rem;
+        justify-self: center;
+    }
 }

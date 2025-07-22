@@ -1,3 +1,5 @@
+@use "../abstracts/mixins";
+
 .list {
     list-style: none;
     padding: 0.8rem 0;
@@ -19,6 +21,10 @@
 
     padding: 1.6rem 3.2rem;
     border-bottom: 1px solid var(--color-background-100);
+
+    @include mixins.respond(phone) {
+        padding: 1.2rem 2.4rem;
+    }
 }
 
 .list.list-movies li {

@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 const containerStyle = {
     display: "flex",
     alignItems: "center",
+    justifyContent: "center",
     gap: "1.6rem",
 };
 

@@ -1,3 +1,5 @@
+@use "../abstracts/mixins";
+
 .details {
     line-height: 1.4;
     font-size: 1.4rem;
@@ -6,6 +8,10 @@
 
 .details header {
     display: flex;
+
+    @include mixins.respond(phone) {
+        flex-direction: column;
+    }
 }
 
 .details section {
@@ -13,14 +19,28 @@
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
+
+    @include mixins.respond(phone) {
+        padding: 2rem;
+    }
+
+    & p {
+        font-size: 2rem;
+        text-align: justify;
+    }
 }
 
 .details img {
     width: 35%;
+
+    @include mixins.respond(phone) {
+        width: 60%;
+        margin: 0 auto;
+    }
 }
 
 .details-overview {
-    width: 100%;
+    max-width: 100%;
     padding: 2.4rem 3rem;
     background-color: var(--color-background-100);
     display: flex;
@@ -32,6 +52,10 @@
     font-size: 2.4rem;
     margin-bottom: 0.4rem;
     line-height: 1.1;
+
+    @include mixins.respond(phone) {
+        line-height: 1.5;
+    }
 }
 
 .details-overview p {
@@ -51,7 +75,8 @@
 .details-add {
     text-transform: uppercase;
     letter-spacing: 1px;
-    &:active{
+
+    &:active {
         background-color: rebeccapurple;
     }
 }
