@@ -37,7 +37,7 @@ function WatchedMovie({ movie, onDeleteWatched }) {
                     className="btn-delete"
                     onClick={() => onDeleteWatched(movie.imdbID)}
                 >
-                    <svg className="icon-summary icon-summary-clock">
+                    <svg className="icon-summary icon-summary-x">
                         <use xlinkHref={`${sprite}#icon-x`}></use>
                     </svg>
                 </button>

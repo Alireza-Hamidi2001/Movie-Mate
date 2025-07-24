@@ -55,6 +55,10 @@
     gap: 2.4rem;
     font-family: "KottaOne";
     font-weight: 200;
+
+    @include mixins.respond(phone) {
+        gap: 1rem;
+    }
 }
 
 .list p {
